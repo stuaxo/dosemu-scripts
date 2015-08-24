@@ -1,0 +1,18 @@
+Backup your .dosemu and /etc/dosemu as this will nuke them !
+
+
+
+run
+
+./clone-dosemu.sh
+
+To grab the different versions - dosemu is cloned to src/dosemu2, and
+the other versions placed in src/dosemu-someversion.
+
+You can run it again to nuke and refresh the other versions.
+
+
+
+./get-versions.sh
+
+Will show the output of  './getversion' in each directory.
