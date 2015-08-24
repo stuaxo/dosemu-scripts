@@ -21,3 +21,6 @@ hash -r
 # remove local comfig
 rm -fR ~/.dosemu
 
+echo You might also want to run:
+echo hash -r
+echo sudo ldconfig
