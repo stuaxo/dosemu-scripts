@@ -2,7 +2,7 @@ Backup your .dosemu and /etc/dosemu as this will nuke them !
 
 
 
-run
+Initialise
 
 ./clone-dosemu.sh
 
@@ -11,8 +11,52 @@ the other versions placed in src/dosemu-someversion.
 
 You can run it again to nuke and refresh the other versions.
 
+- also calls ./dl-freedos.sh to grab freedos
 
+
+
+Check Git Tags
+
+see checked out versions in ./src and their dosemu versions:
 
 ./get-versions.sh
+dosemu versions in directory src:
+dosemu-1.5.0: 1.5.0
+dosemu2: 2.0pre3-20150823-gdea48b4
+dosemu2-2.0pre1: 1.5.0-577-gd5b3f42
+dosemu2-2.0pre2: 2.0pre2
+dosemu2-2.0pre3: 2.0pre3
 
-Will show the output of  './getversion' in each directory.
+
+
+Uninstall current dosemu version
+
+- nukes settings as well, dangerous !
+
+./uninstall-dosemu.sh
+
+
+
+Build and install a version
+
+Use a folder returned by ./get-versions.sh
+
+./install-version.sh dosemu-1.5.0
+
+
+
+Save the config of the current version in config/dosemu-1.5.0
+
+./get-config.sh
+
+
+Install the ubuntu version
+
+./unstall-dosemu.sh
+hash -r
+sudo apt-get purge dosemu
+sudo apt-get install -y doseumu
+sudo ldconfig
+
+
+
